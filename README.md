@@ -12,7 +12,7 @@ It is composed of a set of ontologies:
 *	Police ontology.
 
 
-##Publications
+## Publications
 
 * Modular Ontology for Semantically Enhanced Interoperability in Operational Disaster Response
 * Towards an Interoperable Operational Emergency Response System for Large-Scale Situations: POLARISC

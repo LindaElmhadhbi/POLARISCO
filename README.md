@@ -14,6 +14,6 @@ It is composed of a set of ontologies:
 
 ## Publications
 
-* Linda Elmhadhbi, Mohamed-Hedi Karray and Bernard Archimède: ["Modular Ontology for Semantically Enhanced Interoperability in Operational Disaster Response"]https://www.researchgate.net/publication/333396541_A_Modular_Ontology_for_Semantically_Enhanced_Interoperability_in_Operational_Disaster_Response
-* Linda Elmhadhbi, Mohamed-Hedi Karray and Bernard Archimède: ["Towards an Interoperable Operational Emergency Response System for Large-Scale Situations: POLARISC"]http://idl.iscram.org/files/elmhadhbilinda/2018/1598_ElmhadhbiLinda_etal2018.pdf
-* Linda Elmhadhbi, Mohamed-Hedi Karray and Bernard Archimède: ["Toward the use of upper level ontologies for semantically interoperable systems: An emergency management use case"]http://oatao.univ-toulouse.fr/22794/
+* Linda Elmhadhbi, Mohamed-Hedi Karray and Bernard Archimède: [Modular Ontology for Semantically Enhanced Interoperability in Operational Disaster Response](https://www.researchgate.net/publication/333396541_A_Modular_Ontology_for_Semantically_Enhanced_Interoperability_in_Operational_Disaster_Response)
+* Linda Elmhadhbi, Mohamed-Hedi Karray and Bernard Archimède: [Towards an Interoperable Operational Emergency Response System for Large-Scale Situations: POLARISC](http://idl.iscram.org/files/elmhadhbilinda/2018/1598_ElmhadhbiLinda_etal2018.pdf)
+* Linda Elmhadhbi, Mohamed-Hedi Karray and Bernard Archimède: [Toward the use of upper level ontologies for semantically interoperable systems: An emergency management use case](http://oatao.univ-toulouse.fr/22794/)

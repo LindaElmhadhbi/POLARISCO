@@ -14,6 +14,6 @@ It is composed of a set of ontologies:
 
 ## Publications
 
-* Modular Ontology for Semantically Enhanced Interoperability in Operational Disaster Response
-* Towards an Interoperable Operational Emergency Response System for Large-Scale Situations: POLARISC
-* Toward the use of upper level ontologies for semantically interoperable systems: An emergency management use case
+* Linda Elmhadhbi, Mohamed-Hedi Karray and Bernard Archimède: Modular Ontology for Semantically Enhanced Interoperability in Operational Disaster Response
+* Linda Elmhadhbi, Mohamed-Hedi Karray and Bernard Archimède: Towards an Interoperable Operational Emergency Response System for Large-Scale Situations: POLARISC
+* Linda Elmhadhbi, Mohamed-Hedi Karray and Bernard Archimède: Toward the use of upper level ontologies for semantically interoperable systems: An emergency management use case

@@ -1,0 +1,635 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#"
+     xml:base="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources"
+     xmlns:ExtendedRelationOntology="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:doid="http://purl.obolibrary.org/obo/doid#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources">
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/doid/2018-05-11/doid-non-classified.owl"/>
+        <owl:imports rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#involves -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#involves"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0050700 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DOID_0050700">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#needs"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Cardiovascular_Surgery"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Anesthesia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Anesthesia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Treatment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#part_of"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Surgery"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Act of Anesthesia</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Appendectomy_Surgery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Appendectomy_Surgery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Surgery"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#involves"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Operating_Room"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#involves"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Short_Peripheral_Catheter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#involves"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Anaesthetic_vaporiser"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#involves"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Anesthesia_Machine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#involves"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Blood_Pressure_Monitor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#involves"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:ERO:Oxygen_Monitor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Act of Appendectomy Surgery</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Cardiovascular_Surgery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Cardiovascular_Surgery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Surgery"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#involves"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Operating_Room"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#involves"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Anaesthetic_vaporiser"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#involves"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Anesthesia_Machine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#involves"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Defibrillator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Act of Cardiovascular Surgery</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Cholecystectomy_Surgery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Cholecystectomy_Surgery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Surgery"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#involves"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Operating_Room"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#involves"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Anaesthetic_vaporiser"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#involves"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Anesthesia_Machine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#involves"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Defibrillator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#involves"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:ERO:Oxygen_Monitor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Act of Cholecystectomy Surgery</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Coronary_Artery_Bypass_Surgery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Coronary_Artery_Bypass_Surgery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Surgery"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#involves"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Operating_Room"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#involves"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Anaesthetic_vaporiser"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#involves"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Anesthesia_Machine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#involves"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Defibrillator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#involves"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:ERO:Oxygen_Monitor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Act of Coronary Artery Bypass Surgery</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Debridement_of_Wound_Burn_Infection_Surgery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Debridement_of_Wound_Burn_Infection_Surgery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Surgery"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#involves"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Operating_Room"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#involves"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Respirator_Circuit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#involves"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Anaesthetic_vaporiser"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#involves"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Anesthesia_Machine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#involves"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Infusion_pumps"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Act of Debridement of Wound Burn Infection Surgery</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Inguinal_Hernia_Repair_Surgery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Inguinal_Hernia_Repair_Surgery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Surgery"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#involves"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#High-Concentration_Oxygen_Mask"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#involves"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Operating_Room"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#involves"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Anaesthetic_vaporiser"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#involves"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Anesthesia_Machine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Act of Inguinal Hernia Repair Surgery</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Nursing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Nursing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Treatment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#part_of"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Surgery"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Act of Nursing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Surgery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Surgery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Treatment"/>
+        <rdfs:label xml:lang="en">Act of Surgery</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Treatment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Treatment">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#Act"/>
+        <rdfs:label xml:lang="en">Act of Treatment</rdfs:label>
+        <rdfs:label xml:lang="en">An act of treatment is an act that consists of given the appopriate medical care to a patient for an illness or injury.</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Diagnostic_Device -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Diagnostic_Device">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Medical_device"/>
+        <rdfs:label xml:lang="en">Diagnostic Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Endobronchial_and_Endotracheal_Intubation_Tube -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Endobronchial_and_Endotracheal_Intubation_Tube">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Life_Support_Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#High-Concentration_Oxygen_Mask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#High-Concentration_Oxygen_Mask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Life_Support_Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Laryngoscope_Blade -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Laryngoscope_Blade">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Life_Support_Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Life_Support_Device -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Life_Support_Device">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Medical_device"/>
+        <rdfs:label xml:lang="en">Life Support Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Medical_device -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Medical_device">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#MedicalArtifact"/>
+        <rdfs:comment xml:lang="en">A Medical Device is an Artifact that is designed for diagnosing, treating, or preventing disease or disability.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Operating_Room -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Operating_Room">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Medical_device"/>
+        <rdfs:label xml:lang="en">Operating Room</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Oxygen_Goggles -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Oxygen_Goggles">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Life_Support_Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Respirator_Circuit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Respirator_Circuit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Life_Support_Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Short_Peripheral_Catheter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Short_Peripheral_Catheter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Life_Support_Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Tracheobronchial_Aspiration_Tube -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Tracheobronchial_Aspiration_Tube">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Life_Support_Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Treatment_Device -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Treatment_Device">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Medical_device"/>
+        <rdfs:label xml:lang="en">Treatment Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Anaesthetic_vaporiser -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Anaesthetic_vaporiser">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Treatment_Device"/>
+        <rdfs:label xml:lang="en">Anaesthetic vaporiser</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Anesthesia_Machine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Anesthesia_Machine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Treatment_Device"/>
+        <rdfs:isDefinedBy xml:lang="en">An environment control instrument that is used to support the administration of anaesthesia. It contains a breathing system for delivering a gas mixture, including an anesthetic gas, to a patient for inhalation.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Anesthesia Machine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Angiograph -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Angiograph">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Treatment_Device"/>
+        <rdfs:isDefinedBy xml:lang="en">A device that records the patterns of pulse waves inside blood vessels.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Angiograph</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Blood_Analyzer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Blood_Analyzer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Diagnostic_Device"/>
+        <rdfs:isDefinedBy xml:lang="en">A measurement device that tests a blood sample for certain predetermined constituents.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Blood Analyzer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Blood_Pressure_Monitor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Blood_Pressure_Monitor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Life_Support_Device"/>
+        <rdfs:isDefinedBy xml:lang="en">A monitoring device used to measure blood pressure, comprising an inflatable cuff to restrict blood flow, and a mercury or mechanical manometer to measure the pressure.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Blood Pressure Monitor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Blood_Pressure_Transducer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Blood_Pressure_Transducer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Life_Support_Device"/>
+        <rdfs:isDefinedBy xml:lang="en">An instrument that provides consistent and accurate readings during invasive blood pressure monitoring.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Blood Pressure Transducer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:CT_Scanner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:CT_Scanner">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Scanner"/>
+        <rdfs:label xml:lang="en">CT Scanner</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Calorimeter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Calorimeter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Life_Support_Device"/>
+        <rdfs:label xml:lang="en">Calorimeter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Defibrillator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Defibrillator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Treatment_Device"/>
+        <rdfs:isDefinedBy xml:lang="en">An instrument which delivers a therapeutic dose of electrical energy to the heart. This depolarizes a critical mass of the heart muscle, terminates the arrhythmia, and allows normal sinus rhythm to be reestablished by the body&apos;s natural pacemaker, in the sinoatrial node of the heart. Defibrillators can be external, transvenous, or implanted, depending on the type of device used or needed.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Defibrillator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Dialysis_system -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Dialysis_system">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Life_Support_Device"/>
+        <rdfs:label xml:lang="en">Dialysis system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Incubator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Incubator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Life_Support_Device"/>
+        <rdfs:isDefinedBy xml:lang="en">A device in which environmental conditions (light, photoperiod, temperature, humidity, etc.) can be controlled.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Incubator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Infusion_pumps -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Infusion_pumps">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Treatment_Device"/>
+        <rdfs:label xml:lang="en">Infusion pumps</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:MRI_Scanner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:MRI_Scanner">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Scanner"/>
+        <rdfs:label xml:lang="en">MRI Scanner</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Nebulizer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Nebulizer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Treatment_Device"/>
+        <rdfs:isDefinedBy xml:lang="en">A medical device used to administer medication in the form of a mist inhaled into the lungs.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Nebulizer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Scanner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Scanner">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Diagnostic_Device"/>
+        <rdfs:label xml:lang="en">Scanner</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:ERO:Drug_Delivery_Device -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:ERO:Drug_Delivery_Device">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Life_Support_Device"/>
+        <rdfs:label xml:lang="en">Drug Delivery Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:ERO:Oxygen_Monitor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:ERO:Oxygen_Monitor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Life_Support_Device"/>
+        <rdfs:label xml:lang="en">Oxygen Monitor</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

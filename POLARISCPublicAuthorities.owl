@@ -1,0 +1,260 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#"
+     xml:base="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities"
+     xmlns:ExtendedRelationOntology="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities">
+        <owl:imports rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Government_service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Government_service">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#Organization"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#part_of"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#Government"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Government service</rdfs:label>
+        <rdfs:label xml:lang="fr">Service du Gouvernement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Maire -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Maire">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Public_Authority_Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_supervised_by"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Sous-Préfét"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="fr">Maire</rdfs:label>
+        <rdfs:label xml:lang="en">Mayor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Mairie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Mairie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Government_service"/>
+        <rdfs:label xml:lang="en">City Hall</rdfs:label>
+        <rdfs:label xml:lang="fr">Mairie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Ministre_de_la_Justice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Ministre_de_la_Justice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Public_Authority_Role"/>
+        <rdfs:label xml:lang="en">Justice Minister</rdfs:label>
+        <rdfs:label xml:lang="fr">Ministre de la Justice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Ministre_des_Armées -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Ministre_des_Armées">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Public_Authority_Role"/>
+        <rdfs:label xml:lang="en">Minister of the Armed Forces</rdfs:label>
+        <rdfs:label xml:lang="fr">Ministre des Armées</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Ministre_des_Solidarités_et_de_la_Santé -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Ministre_des_Solidarités_et_de_la_Santé">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Public_Authority_Role"/>
+        <rdfs:label xml:lang="en">Minister of Solidarity and Health</rdfs:label>
+        <rdfs:label xml:lang="fr">Ministre des Solidarités et de la Santé</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Ministère_de_la_Justice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Ministère_de_la_Justice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Government_service"/>
+        <rdfs:label xml:lang="en">Ministry of Justice</rdfs:label>
+        <rdfs:label xml:lang="fr">Ministère de la Justice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Ministère_des_Armées -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Ministère_des_Armées">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Government_service"/>
+        <rdfs:label xml:lang="en">Ministry of the Armed Forces</rdfs:label>
+        <rdfs:label xml:lang="fr">Ministère des Armées</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Premier_Ministre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Premier_Ministre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Public_Authority_Role"/>
+        <rdfs:label xml:lang="fr">Premier Ministre</rdfs:label>
+        <rdfs:label xml:lang="en">Prime Minister</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Préfecture -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Préfecture">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Government_service"/>
+        <rdfs:label xml:lang="en">Prefecture</rdfs:label>
+        <rdfs:label xml:lang="fr">Préfecture</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Préfét -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Préfét">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Public_Authority_Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_supervised_by"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Préfét_de_Département"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Prefet</rdfs:label>
+        <rdfs:label xml:lang="fr">Préfét</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Préfét_Zonale -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Préfét_Zonale">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Public_Authority_Role"/>
+        <rdfs:label xml:lang="fr">Préfét Zonale</rdfs:label>
+        <rdfs:label xml:lang="en">Zonal Prefect</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Préfét_de_Département -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Préfét_de_Département">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Public_Authority_Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_supervised_by"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Ministre_d&apos;Intérieur"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Prefect of Department</rdfs:label>
+        <rdfs:label xml:lang="fr">Préfét de Département</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Public_Authority -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Public_Authority">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#OrganizationMember"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#has_role"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Public_Authority_Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_affiliated_with"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#Government"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="fr">Authorité Publique</rdfs:label>
+        <rdfs:label xml:lang="en">Public Authority</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Public_Authority_Role -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Public_Authority_Role">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#OrganizationMemberRole"/>
+        <rdfs:label xml:lang="en">Public Authority Role</rdfs:label>
+        <rdfs:label xml:lang="fr">Rôle Autorité Publique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Sous-Préfét -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Sous-Préfét">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Public_Authority_Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_supervised_by"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Préfét"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="fr">Sous-Préfét</rdfs:label>
+        <rdfs:label xml:lang="en">Sub-prefect</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Ministre_d&apos;Intérieur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Ministre_d&apos;Intérieur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Public_Authority_Role"/>
+        <rdfs:label xml:lang="en">Interior Minister</rdfs:label>
+        <rdfs:label xml:lang="fr">Ministre d&apos;Intérieur</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Ministère_de_l&apos;intérieur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Ministère_de_l&apos;intérieur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Government_service"/>
+        <rdfs:label xml:lang="en">Ministry of the Interior</rdfs:label>
+        <rdfs:label xml:lang="fr">Ministère de l&apos;intérieur</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

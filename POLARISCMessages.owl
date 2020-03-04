@@ -1,0 +1,473 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#"
+     xml:base="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages"
+     xmlns:ExtendedRelationOntology="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages">
+        <owl:imports rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Message -->
+
+    <rdf:Description rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Message">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#has_recipient"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#EDXL-Receiver"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#has_sender"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#EDXL-Sender"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#is_about"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Operation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#bearer_of"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Message_content"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#has_quality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Operation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#has_quality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Message_Confidentiality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#has_quality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Message_Degree_of_Criticality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#has_quality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Message_State"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Alert_Message -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Alert_Message">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Informative_Message"/>
+        <rdfs:label xml:lang="en">Alert Message</rdfs:label>
+        <rdfs:label xml:lang="fr">Message d&apos;Alerte</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Arrival_Message -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Arrival_Message">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Information_Message"/>
+        <rdfs:label xml:lang="en">Arrival Message</rdfs:label>
+        <rdfs:label xml:lang="fr">Message d’Arrivée</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Availability_on_Action_Center -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Availability_on_Action_Center">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Information_Message"/>
+        <rdfs:label xml:lang="en">Availability on Action Center</rdfs:label>
+        <rdfs:label xml:lang="fr">Disponibilité Sur Secteur</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Back_to_Center_Message -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Back_to_Center_Message">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Information_Message"/>
+        <rdfs:label xml:lang="en">Back to Center Message</rdfs:label>
+        <rdfs:label xml:lang="fr">Message de Rentrée au Centre</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Backup_Request_Message -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Backup_Request_Message">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Request_Message"/>
+        <rdfs:label xml:lang="en">Backup Request Message</rdfs:label>
+        <rdfs:label xml:lang="fr">Message de demande de Renfort</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Bilan_Secouriste -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Bilan_Secouriste">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Report_Message"/>
+        <rdfs:label xml:lang="fr">Bilan Secouriste</rdfs:label>
+        <rdfs:label xml:lang="en">Victims Rescue Report</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Custody_Report -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Custody_Report">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Report_Message"/>
+        <rdfs:label xml:lang="fr">Bilan Garde à Vue</rdfs:label>
+        <rdfs:label xml:lang="en">Custody Report</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Departure_Message -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Departure_Message">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Information_Message"/>
+        <rdfs:label xml:lang="en">Departure Message</rdfs:label>
+        <rdfs:label xml:lang="fr">Message De Départ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#EDXL-Receiver -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#EDXL-Receiver">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#Agent"/>
+        <rdfs:label xml:lang="fr">Destinataire</rdfs:label>
+        <rdfs:label xml:lang="en">Receiver</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#EDXL-Sender -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#EDXL-Sender">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#Agent"/>
+        <rdfs:label xml:lang="fr">Emetteur</rdfs:label>
+        <rdfs:label xml:lang="en">Sender</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#EDXL_Message_Identifier -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#EDXL_Message_Identifier">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#DesignativeInformationContentEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#designates"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Message"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="fr">Identifiant du Message</rdfs:label>
+        <rdfs:label xml:lang="en">Message Identifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Emergency_Plan_Activation_Message -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Emergency_Plan_Activation_Message">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Informative_Message"/>
+        <rdfs:label xml:lang="en">Emergency Plan Activation Message</rdfs:label>
+        <rdfs:label xml:lang="fr">Message d&apos;Activation de Plan d&apos;Urgence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Extreme -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Extreme">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Message_Degree_of_Criticality"/>
+        <rdfs:label xml:lang="en">Extreme</rdfs:label>
+        <rdfs:label xml:lang="fr">Extrême</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Information_Message -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Information_Message">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Informative_Message"/>
+        <rdfs:label xml:lang="en">Information Message</rdfs:label>
+        <rdfs:label xml:lang="fr">Message d&apos;Information</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Informative_Message -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Informative_Message">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Message"/>
+        <rdfs:label xml:lang="en">Informative Message</rdfs:label>
+        <rdfs:label xml:lang="fr">Message Informative</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Limited -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Limited">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Message_Confidentiality"/>
+        <rdfs:label xml:lang="en">Limited</rdfs:label>
+        <rdfs:label xml:lang="fr">Limité</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Message_Confidentiality -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Message_Confidentiality">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:label xml:lang="fr">Confidentialité du Message</rdfs:label>
+        <rdfs:label xml:lang="en">Message Confidentiality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Message_Degree_of_Criticality -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Message_Degree_of_Criticality">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:label xml:lang="fr">Degré de Criticité du Message</rdfs:label>
+        <rdfs:label xml:lang="en">Message Degree of Criticality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Message_State -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Message_State">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:label xml:lang="fr">Etat du Message</rdfs:label>
+        <rdfs:label xml:lang="en">Message State</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Message_content -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Message_content">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#InformationContentEntity"/>
+        <rdfs:label xml:lang="fr">Contenu du message</rdfs:label>
+        <rdfs:label xml:lang="en">Message Content</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Moderated -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Moderated">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Message_Degree_of_Criticality"/>
+        <rdfs:label xml:lang="en">Moderated</rdfs:label>
+        <rdfs:label xml:lang="fr">Modéré</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Ongoing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Ongoing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Message_State"/>
+        <rdfs:label xml:lang="fr">En cours</rdfs:label>
+        <rdfs:label xml:lang="en">Ongoing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Operation_ID -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Operation_ID">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#DesignativeInformationContentEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#designates"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Operation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Operation ID</rdfs:label>
+        <rdfs:label xml:lang="fr">Opération ID</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Private -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Private">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Message_Confidentiality"/>
+        <rdfs:label xml:lang="en">Private</rdfs:label>
+        <rdfs:label xml:lang="fr">Privé</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Public -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Public">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Message_Confidentiality"/>
+        <rdfs:label xml:lang="en">Public</rdfs:label>
+        <rdfs:label xml:lang="fr">Publique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Report_Message -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Report_Message">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Informative_Message"/>
+        <rdfs:label xml:lang="fr">Message de Rapport</rdfs:label>
+        <rdfs:label xml:lang="en">Report Message</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Request_Message -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Request_Message">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Message"/>
+        <rdfs:label xml:lang="fr">Message de demande</rdfs:label>
+        <rdfs:label xml:lang="en">Request Message</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Resource_Request_Message -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Resource_Request_Message">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Request_Message"/>
+        <rdfs:label xml:lang="fr">Message de demande de ressource</rdfs:label>
+        <rdfs:label xml:lang="en">Resource Request Message</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Response_Message -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Response_Message">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Message"/>
+        <rdfs:label xml:lang="fr">Message de réponse</rdfs:label>
+        <rdfs:label xml:lang="en">Response Message</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Secondary -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Secondary">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Message_Degree_of_Criticality"/>
+        <rdfs:label xml:lang="fr">Secondaire</rdfs:label>
+        <rdfs:label xml:lang="en">Secondary</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Transport_Message -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Transport_Message">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Information_Message"/>
+        <rdfs:label xml:lang="fr">Message de Transport</rdfs:label>
+        <rdfs:label xml:lang="en">Transport Message</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Treated -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Treated">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Message_State"/>
+        <rdfs:label xml:lang="fr">Traité</rdfs:label>
+        <rdfs:label xml:lang="en">Treated</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Untreated -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Untreated">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Message_State"/>
+        <rdfs:label xml:lang="fr">Non Traité</rdfs:label>
+        <rdfs:label xml:lang="en">Untreated</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#EDXL:Agent_ID -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#EDXL:Agent_ID">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#DesignativeInformationContentEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#designates"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#EDXL-Receiver"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#designates"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#EDXL-Sender"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Agent ID</rdfs:label>
+        <rdfs:label xml:lang="fr">Agent_ID</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Message_d&apos;ambiance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Message_d&apos;ambiance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages#Information_Message"/>
+        <rdfs:label xml:lang="en">Ambient Message</rdfs:label>
+        <rdfs:label xml:lang="fr">Message d&apos;ambiance</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

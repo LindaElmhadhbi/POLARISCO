@@ -1,0 +1,432 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#"
+     xml:base="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice"
+     xmlns:ExtendedRelationOntology="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice">
+        <owl:imports rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Act_of_Victims_Gathering -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Act_of_Victims_Gathering">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Police_Member"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Act_of_Cross-Border_Security -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Act_of_Cross-Border_Security">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Act_of_Police_Force"/>
+        <rdfs:label xml:lang="en">Act of Cross Border Security</rdfs:label>
+        <rdfs:label xml:lang="fr">Acte de sécurité aux frontières</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Act_of_Internal_Control -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Act_of_Internal_Control">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Act_of_Police_Force"/>
+        <rdfs:label xml:lang="en">Act of Internal Control</rdfs:label>
+        <rdfs:label xml:lang="fr">Acte de contrôle interne</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Act_of_Investigation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Act_of_Investigation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Act_of_Police_Force"/>
+        <rdfs:label xml:lang="en">Act of Investigation</rdfs:label>
+        <rdfs:label xml:lang="fr">Acte d&apos;investigation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Act_of_Police_Force -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Act_of_Police_Force">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IntentionalAct"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Police_Member"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Act of Police Force</rdfs:label>
+        <rdfs:label xml:lang="fr">Acte de la Police</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Act_of_Public_Order -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Act_of_Public_Order">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Act_of_Police_Force"/>
+        <rdfs:label xml:lang="en">Act of Public Order</rdfs:label>
+        <rdfs:label xml:lang="fr">Acte d&apos;ordre public</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Act_of_Research -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Act_of_Research">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Act_of_Internal_Control"/>
+        <rdfs:label xml:lang="en">Act of Research</rdfs:label>
+        <rdfs:label xml:lang="fr">Acte de Recherche</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#All-Terrain_Vehicle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#All-Terrain_Vehicle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Police_Force_Vehicle"/>
+        <rdfs:label xml:lang="en">All-Terrain Vehicle</rdfs:label>
+        <rdfs:label xml:lang="fr">Vehicule tout terrain</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Anti-drug_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Anti-drug_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Special_Unit"/>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">MILAD</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="en">Anti-drug Unit</rdfs:label>
+        <rdfs:label xml:lang="fr">Unité de lutte anti-drogue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Anti_Terrorism_Coordination_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Anti_Terrorism_Coordination_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Special_Unit"/>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">UCLAT</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="en">Anti Terrorism Coordination Unit</rdfs:label>
+        <rdfs:label xml:lang="fr">Unité de coordination de la lutte antiterroriste</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Central_Directorate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Central_Directorate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Police_Force"/>
+        <rdfs:label xml:lang="en">Central Directorate</rdfs:label>
+        <rdfs:label xml:lang="fr">Direction Centrale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Central_Directorate_of_Border_Police -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Central_Directorate_of_Border_Police">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Central_Directorate"/>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">DCPAF</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="en">Central Directorate of Border Police</rdfs:label>
+        <rdfs:label xml:lang="fr">Direction centrale de la police aux frontières</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Central_Directorate_of_Public_Security -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Central_Directorate_of_Public_Security">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Central_Directorate"/>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">DCSP</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="en">Central Directorate of Public Security</rdfs:label>
+        <rdfs:label xml:lang="fr">Direction centrale de la Sécurité publique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Central_Directorate_of_Republican_Security_Companies -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Central_Directorate_of_Republican_Security_Companies">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Central_Directorate"/>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">DCCRS</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="en">Central Directorate of Republican Security Companies</rdfs:label>
+        <rdfs:label xml:lang="fr">Direction centrale des compagnies républicaines de sécurité</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Central_Directorate_of_the_Judicial_Police -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Central_Directorate_of_the_Judicial_Police">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Central_Directorate"/>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">DCPJ</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="en">Central Directorate of the Judicial Police</rdfs:label>
+        <rdfs:label xml:lang="fr">Direction centrale de la police judiciaire</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#General_Director_of_the_National_Police -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#General_Director_of_the_National_Police">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Police_Force_Member_Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#has_quality"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Commandement_Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">Directeur GPN</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="fr">Directeur Général de la Police Nationale</rdfs:label>
+        <rdfs:label xml:lang="en">General Director of the National Police</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#General_Directorate_of_the_National_Police -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#General_Directorate_of_the_National_Police">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Police_Force"/>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">DGPN</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="fr">Direction Générale de la Police Nationale</rdfs:label>
+        <rdfs:label xml:lang="en">General Directorate of the National Police</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Information_and_Communication_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Information_and_Communication_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Special_Unit"/>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">SICoP</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="en">Information and Communication Unit</rdfs:label>
+        <rdfs:label xml:lang="fr">Service d&apos;information et de communication de la Police nationale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Officer_of_Commandement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Officer_of_Commandement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Police_Force_Member_Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#has_quality"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Commandement_Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">CC</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="fr">Corps de commandement</rdfs:label>
+        <rdfs:label xml:lang="en">Officer of Commandement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Officer_of_Design_and_Direction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Officer_of_Design_and_Direction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Police_Force_Member_Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#has_quality"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Operationnal_Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">CCD</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="fr">Corps de conception et de direction</rdfs:label>
+        <rdfs:label xml:lang="en">Officer of Design and Direction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Officer_of_Supervision_and_Application -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Officer_of_Supervision_and_Application">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Police_Force_Member_Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#has_quality"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Operationnal_Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">CEA</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="fr">Corps d&apos;encadrement et d’application</rdfs:label>
+        <rdfs:label xml:lang="en">Officer_of_Supervision_and_Application</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Patrol_Vehicle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Patrol_Vehicle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Police_Force_Vehicle"/>
+        <rdfs:label xml:lang="en">Patrol Vehicle</rdfs:label>
+        <rdfs:label xml:lang="fr">Véhicule Patrouille</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Police_Force -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Police_Force">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#Organization"/>
+        <rdfs:label xml:lang="fr">Police</rdfs:label>
+        <rdfs:label xml:lang="en">Police Force</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Police_Force_Member_Role -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Police_Force_Member_Role">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#OrganizationMemberRole"/>
+        <rdfs:label xml:lang="en">Police Member Role</rdfs:label>
+        <rdfs:label xml:lang="fr">Rôle du Policier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Police_Force_Vehicle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Police_Force_Vehicle">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Automobile"/>
+        <rdfs:label xml:lang="en">Police Force Vehicle</rdfs:label>
+        <rdfs:label xml:lang="fr">Véhicule de la Police</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Police_Member -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Police_Member">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#OrganizationMember"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_affiliated_with"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Police_Force"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#has_role"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Police_Force_Member_Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Police Officer</rdfs:label>
+        <rdfs:label xml:lang="fr">Policier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Police_Prefecture -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Police_Prefecture">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Police_Force"/>
+        <rdfs:label xml:lang="en">Police Prefecture</rdfs:label>
+        <rdfs:label xml:lang="fr">Préfecture de Police</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Protection_Service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Protection_Service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Central_Directorate"/>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">SDLP</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="en">Protection Service</rdfs:label>
+        <rdfs:label xml:lang="fr">Service de la protection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Research_Assistance_Intervention_and_Deterrence_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Research_Assistance_Intervention_and_Deterrence_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Special_Unit"/>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">RAID</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="en">Research Assistance Intervention and Deterrence Unit</rdfs:label>
+        <rdfs:label xml:lang="fr">Unité de Recherche Assistance Intervention et Dissuasion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Security_Assistant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Security_Assistant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Police_Force_Member_Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#has_quality"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Operationnal_Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">ADS</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="fr">Adjoints de Sécurité</rdfs:label>
+        <rdfs:label xml:lang="en">Security Assistant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Special_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Special_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Police_Force"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Technical_and_Scientific_Officer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Technical_and_Scientific_Officer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Police_Force_Member_Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#has_quality"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Operationnal_Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="fr">Agent spécialisé technique et scientifique</rdfs:label>
+        <rdfs:label xml:lang="en">Technical and Scientific Officer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Unmarked_Vehicle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Unmarked_Vehicle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Police_Force_Vehicle"/>
+        <rdfs:label xml:lang="en">Unmarked Vehicle</rdfs:label>
+        <rdfs:label xml:lang="fr">Véhicule banalisé</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

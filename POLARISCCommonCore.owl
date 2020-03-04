@@ -1,0 +1,1090 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#"
+     xml:base="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO"
+     xmlns:ExtendedRelationOntology="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO">
+        <owl:imports rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AllCoreOntology"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#has_process_profile -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#has_process_profile">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:label xml:lang="en">has process profile</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#has_stasis -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#has_stasis">
+        <rdfs:label xml:lang="en">has stasis</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#needs -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#needs">
+        <rdfs:label xml:lang="en">needs</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#Agent -->
+
+    <rdf:Description rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#Agent">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#has_role"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#Disease -->
+
+    <rdf:Description rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#Disease">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#caused_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Disaster"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Vehicle -->
+
+    <rdf:Description rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Vehicle">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#has_stasis"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Available"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Engaged"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Accident -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Accident">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Human-made_Disaster"/>
+        <rdfs:isDefinedBy xml:lang="en">An accident is an unplanned event that sometimes has convenient or undesirable consequences on the human and the environment.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="fr">Un accident est un événement qui apparaît ponctuellement dans l&apos;espace et dans le temps, à la suite d&apos;une ou plusieurs causes, et qui entraîne des dommages vis-à-vis des personnes, des biens ou de l’environnement.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Accident</rdfs:label>
+        <rdfs:label xml:lang="fr">Accident</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Act_Profile -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Act_Profile">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000144"/>
+        <rdfs:label xml:lang="en">Act Profile</rdfs:label>
+        <rdfs:label xml:lang="fr">Profil de l&apos;acte</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Act_of_Backup -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Act_of_Backup">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IntentionalAct"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#OrganizationMember"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#has_process_profile"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Defensive_Act"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Offensive_Act"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Act of Backup</rdfs:label>
+        <rdfs:label xml:lang="fr">Acte de Renfort</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Act_of_Public_Order -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Act_of_Public_Order">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#Act"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#OrganizationMember"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Act of Public Order</rdfs:label>
+        <rdfs:label xml:lang="fr">Acte d&apos;ordre publique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Act_of_Security -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Act_of_Security">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#Act"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#OrganizationMember"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Act of Security</rdfs:label>
+        <rdfs:label xml:lang="fr">Acte de Sécurité</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Act_of_Victims_Evacuation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Act_of_Victims_Evacuation">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IntentionalAct"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#OrganizationMember"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#has_process_profile"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Defensive_Act"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Act of Victims Evacuation</rdfs:label>
+        <rdfs:label xml:lang="fr">Acte d&apos;Evacuation des Victimes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Act_of_Victims_Gathering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Act_of_Victims_Gathering">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IntentionalAct"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#OrganizationMember"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#occurs_at"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Victim_Gathering_Point"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#has_process_profile"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Defensive_Act"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Act of Victims Gathering</rdfs:label>
+        <rdfs:label xml:lang="fr">Acte de Ramassage des Victimes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Act_of_Victims_Rescue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Act_of_Victims_Rescue">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IntentionalAct"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#OrganizationMember"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#has_process_profile"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Defensive_Act"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Act of Victims Rescue</rdfs:label>
+        <rdfs:label xml:lang="fr">Acte de Secours des Victimes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Action_Center -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Action_Center">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#OperationalArea"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#located_in"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/GeospatialOntology#GeopoliticalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Action Center</rdfs:label>
+        <rdfs:label xml:lang="fr">Centre d&apos;action</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Air_crash -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Air_crash">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Transport_accident"/>
+        <rdfs:label xml:lang="en">Air Crash</rdfs:label>
+        <rdfs:label xml:lang="fr">Crash aérien</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Atmospheric_pollution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Atmospheric_pollution">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Human-made_Disaster"/>
+        <rdfs:isDefinedBy xml:lang="en">Air pollution is an accident that occurs when harmful or excessive quantities of substances are introduced into the atmosphere.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="fr">La pollution atmospherique est un accident qui se produit lorsque des quantités nocives ou excessives de substances sont introduites dans l&apos;atmosphère.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Atmospheric Pollution</rdfs:label>
+        <rdfs:label xml:lang="fr">Pollution Atmospherique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Available -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Available">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Object_Stasis"/>
+        <rdfs:isDefinedBy xml:lang="en">An object that is able to be used.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Available</rdfs:label>
+        <rdfs:label xml:lang="fr">Disponible</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Avalanche -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Avalanche">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Geologic_event"/>
+        <rdfs:isDefinedBy xml:lang="en">An avalanche is a natural disaster that consists of a mass of snow, ice, and rocks falling rapidly down a mountainside.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="fr">Une avalanche est une catastrophe naturelle qui désigne une chute d&apos;une masse de neige qui se détache de la montagne et dévale sur un versant en direction de la vallée.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Avalanche</rdfs:label>
+        <rdfs:label xml:lang="fr">Avalanche</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Bar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Bar">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/GeospatialOntology#ConstructedFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Bed -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Bed">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Equipment"/>
+        <rdfs:isDefinedBy xml:lang="en">A bed is an equipement that consists of a piece of furniture for sleep or rest.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Bed</rdfs:label>
+        <rdfs:label xml:lang="fr">Lit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Biologic_event -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Biologic_event">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Natural_disaster"/>
+        <rdfs:isDefinedBy xml:lang="en">Biological disaster is a process that refers to calamity caused by the exposure of living organisms to germs and toxic substances.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="fr">Biological disaster is a process that refers to calamity caused by the exposure of living organisms to germs and toxic substances.
+
+ Catastrophe biologique est un processus causé par des évènements sanitaires qui peut causer des boulversements sociaux de grande ampleur.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Biological Event</rdfs:label>
+        <rdfs:label xml:lang="fr">Événement Biologique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Chemical_accident -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Chemical_accident">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Accident"/>
+        <rdfs:label xml:lang="fr">Accident Chimique</rdfs:label>
+        <rdfs:label xml:lang="en">Chemical Accident</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Chemical_explosion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Chemical_explosion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Explosion"/>
+        <rdfs:isDefinedBy xml:lang="en">A chemical explosion is a violent explosion or blowing apart of something, as is caused by a bomb.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="fr">Une explosion chimique est une explosion violente ou un éclatement d&apos;un ou plusieurs produits chimiques.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Chemical Explosion</rdfs:label>
+        <rdfs:label xml:lang="fr">Explosion Chimique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Climatic_event -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Climatic_event">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Natural_disaster"/>
+        <rdfs:isDefinedBy xml:lang="en">A climatic event is a disaster process in which a period of statistical climate extremity alters ecosystem structure and/or function outside the bounds of what is considered typical or normal variability.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="fr">Une catastrophe naturelle est une catasrophe d&apos;origine naturelle provoquée par des causes météorologiques, qui provoque des bouleversements importants pouvant engendrer de grands dégâts matériels et humains.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Climatic Event</rdfs:label>
+        <rdfs:label xml:lang="fr">Événement Climatique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Commandement_Role -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Commandement_Role">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#OccupationRole"/>
+        <rdfs:label xml:lang="en">Commandement Role</rdfs:label>
+        <rdfs:label xml:lang="fr">Rôle de Commandement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Concert_hall -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Concert_hall">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/GeospatialOntology#ConstructedFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Coordinated_Operation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Coordinated_Operation">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IntentionalAct"/>
+        <rdfs:label xml:lang="en">Coordinated Operation</rdfs:label>
+        <rdfs:label xml:lang="fr">Opération Coordonnée</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Cyclone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Cyclone">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Climatic_event"/>
+        <rdfs:isDefinedBy xml:lang="en">A cyclone is a natural disaster that consists of a system of winds rotating inwards to an area of low barometric pressure, with an anticlockwise  or clockwise  circulation.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="fr">Une cyclone est une catasrophe naturelle qui designe une masse atmosphérique animée d&apos;un mouvement de rotation en sens inverse des aiguilles d&apos;une montre, accompagnée de vents forts, d&apos;une baisse barométrique et de précipitations.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Cyclone</rdfs:label>
+        <rdfs:label xml:lang="fr">Cyclone</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#DCD -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#DCD">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Victim_Stasis_Code_Identifier"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#participates_in"/>
+                <owl:someValuesFrom rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#Death"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ExtendedRelationOntology:acronym xml:lang="fr">Dead</ExtendedRelationOntology:acronym>
+        <rdfs:label xml:lang="en">DCD</rdfs:label>
+        <rdfs:label xml:lang="fr">DCD</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Date -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Date">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Defensive_Act -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Defensive_Act">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Act_Profile"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Offensive_Act"/>
+        <ExtendedRelationOntology:alternative_label xml:lang="en">A defensive act is a process profile that consists of an act of protection.</ExtendedRelationOntology:alternative_label>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">Un acte défensif est un type de processus qui désigne un acte de protection.</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="fr">Act Défensif</rdfs:label>
+        <rdfs:label xml:lang="en">Defensive Act</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Disaster -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Disaster">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#occurs_at"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/GeospatialOntology#AnthropogenicFeature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#occurs_at"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/GeospatialOntology#GeopoliticalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#occurs_on"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy xml:lang="en">A disaster is a process that brings great damage, loss, or destruction
+ for the human and the environment.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="fr">Une catastrophe est un processus qui entraîne des dommages, des pertes ou des destructions pour l&apos;homme et l&apos;environnement.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="fr">Catastrophe</rdfs:label>
+        <rdfs:label xml:lang="en">Disaster</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Doctor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Doctor">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#OrganizationMemberRole"/>
+        <rdfs:label xml:lang="en">Doctor</rdfs:label>
+        <rdfs:label xml:lang="fr">Médecin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Domestic_accident -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Domestic_accident">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Accident"/>
+        <rdfs:label xml:lang="fr">Accident Domestique</rdfs:label>
+        <rdfs:label xml:lang="en">Domestic Accident</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Earthquake -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Earthquake">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Geologic_event"/>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">Séisme</ExtendedRelationOntology:alternative_label>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">Un tremblement de terre est une catastrophe naturelle qui désigne une vaste secousse tellurique due aux mouvements de la tectonique des plaques.</ExtendedRelationOntology:alternative_label>
+        <rdfs:isDefinedBy xml:lang="en">An earthquake is a natural disaster that consists of a sudden violent shaking of the ground, typically causing great destruction, as a result of movements within the earth&apos;s crust or volcanic action.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Earthquake</rdfs:label>
+        <rdfs:label xml:lang="fr">Tremblement de terre</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Engaged -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Engaged">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Object_Stasis"/>
+        <rdfs:isDefinedBy xml:lang="en">An object that is in use.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Engaged</rdfs:label>
+        <rdfs:label xml:lang="fr">Engagé</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Epidemic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Epidemic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Biologic_event"/>
+        <rdfs:isDefinedBy xml:lang="en">An epidemic is a disaster process that consists of a widespread occurrence of an infectious disease in a community at a particular time.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="fr">Une épidémie est un procesus de catastrophe qui signifie l&apos;apparition et la propagation d&apos;une maladie infectieuse contagieuse qui frappe en même temps et en un même endroit un grand nombre de personnes, d&apos;animaux ou de plantes.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Epidemic</rdfs:label>
+        <rdfs:label xml:lang="fr">Épidémie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Equipment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Equipment">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Artifact"/>
+        <rdfs:isDefinedBy xml:lang="en">An equipment is an artefact that consists of an item (land, building, tools) fitted out for a specific use.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="fr">Un équipement est un artefact qui désigne un bien (terrain, bâtiment, outillage) aménagés en vue d’un usage déterminé.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="fr">Equipement</rdfs:label>
+        <rdfs:label xml:lang="en">Equipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Explosion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Explosion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Human-made_Disaster"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#caused_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Accident"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy xml:lang="fr">Une explosion est une augmentation rapide de volume et une libération d&apos;énergie, généralement avec génération de hautes températures et de gaz.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Explosion</rdfs:label>
+        <rdfs:label xml:lang="fr">Explosion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Extreme_temperature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Extreme_temperature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Climatic_event"/>
+        <rdfs:isDefinedBy xml:lang="en">An extreme tempature is a natural disaster that consists of temperature that hover 10 degrees or more above the average high temperature for the region and last for several weeks.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="fr">Une température extrême est une température qui dépasse la température moyenne de 10 degrés ou plus dans une région et qui dure plusieurs semaines.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Extreme Temperature</rdfs:label>
+        <rdfs:label xml:lang="fr">Température Extrême</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Fire -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Fire">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Human-made_Disaster"/>
+        <rdfs:isDefinedBy xml:lang="en">A fire is a disaster process in which substances combine chemically with oxygen from the air and typically give out bright light, heat, and smoke; combustion or burning.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="fr">Un incendie est un processus dans lequel des substances se combinent chimiquement avec l&apos;oxygène de l&apos;air et dégagent généralement des flammes, de la chaleur et de la lumière.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="fr">Feu</rdfs:label>
+        <rdfs:label xml:lang="en">Fire</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Flood -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Flood">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Climatic_event"/>
+        <rdfs:isDefinedBy xml:lang="en">A flood is a natural disaster that consists of an overflow of a large amount of water beyond its normal limits, especially over what is normally dry land.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="fr">Une inondation est une catastrophe naturelle qui designe un débordement d&apos;une grande quantité d&apos;eau au-delà de ses limites normales, en particulier sur ce qui est normalement une terre sèche.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Flood</rdfs:label>
+        <rdfs:label xml:lang="fr">Inondation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Forest_fire -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Forest_fire">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Climatic_event"/>
+        <rdfs:isDefinedBy xml:lang="en">A forest fire is a natural disaster that consists of a large, destructive fire that spreads over a forest or area of woodland.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="fr">Un feu de forêt est une catastrophe naturelle qui designe un grand incendie destructeur qui se propage sur une forêt ou une zone boisée.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="fr">Feu de forêt</rdfs:label>
+        <rdfs:label xml:lang="en">Forest Fire</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Geologic_event -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Geologic_event">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Natural_disaster"/>
+        <rdfs:isDefinedBy xml:lang="en">An geological event is a natural disaster driven by the internal force of earth that can significantly change the physical landforms on the earth surface or the structure underneath.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="fr">Un évenement géologique est une catastrophe naturelle qui designe un type de risque qui peut aboutir à un incident ou accident lié à la nature du terrain, comme un séisme ou un glissement de terrain.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Geologic Event</rdfs:label>
+        <rdfs:label xml:lang="fr">Événement Géologique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Hospital -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Hospital">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Infrastructure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#contains"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Bed"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy xml:lang="en">A hospital is an artifact that consists of an institution providing medical and surgical treatment and nursing care for sick or injured people.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="fr">Un hôpital est un artefact qui désigne un établissement où peuvent être admis tous les malades pour y être traités.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Hospital</rdfs:label>
+        <rdfs:label xml:lang="fr">Hôpital</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Human-made_Disaster -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Human-made_Disaster">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Disaster"/>
+        <rdfs:isDefinedBy xml:lang="en">Human-made disaster is disaster resulting from man-made hazards.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="fr">Une catastrophe due à l&apos;homme est une catastrophe qui est liée aux activités humaines.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="fr">Catastrophe due à l&apos;Homme</rdfs:label>
+        <rdfs:label xml:lang="en">Human-made Disaster</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Insect_invasion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Insect_invasion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Biologic_event"/>
+        <rdfs:isDefinedBy xml:lang="en">An insect invasion is a disaster process that means lots of bugs are invading.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="fr">Une invasion d&apos;insectes est un processus de catastrophe qui signifie qu&apos;il y a de nombreux insectes qui envahissent un endoit à un certain temps.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Insect Invasion</rdfs:label>
+        <rdfs:label xml:lang="fr">Invasion d&apos;insectes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Maritime_accident -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Maritime_accident">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Transport_accident"/>
+        <rdfs:label xml:lang="fr">Accident Maritime</rdfs:label>
+        <rdfs:label xml:lang="en">Maritime Accident</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Mining_explosion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Mining_explosion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Explosion"/>
+        <rdfs:label xml:lang="fr">Explosion Minière</rdfs:label>
+        <rdfs:label xml:lang="en">Mining Explosion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Natural_disaster -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Natural_disaster">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Disaster"/>
+        <rdfs:isDefinedBy xml:lang="en">Natural disaster is a disaster resulting from natural disasters hazards.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="fr">Une catastrophe naturelle est une catastrophe qui concerne des évènements climatiques, sismiques ou astronomiques majeurs.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="fr">Catastrophe Naturelle</rdfs:label>
+        <rdfs:label xml:lang="en">Natural Disaster</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Nuclear_accident -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Nuclear_accident">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Accident"/>
+        <rdfs:label xml:lang="fr">Accident Nucléaire</rdfs:label>
+        <rdfs:label xml:lang="en">Nuclear Accident</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Nuclear_event -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Nuclear_event">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Natural_disaster"/>
+        <ExtendedRelationOntology:alternative_label xml:lang="en">A nuclear event is a natural disaster that consists of a severe nuclear reactor accident that results in core damage from overheating.</ExtendedRelationOntology:alternative_label>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">Un événement nucléaire est une catastrophe naturelle qui désigne un grave accident de réacteur nucléaire qui entraîne des dommages à l&apos;environement 
+due à une surchauffe.</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="en">Nuclear Event</rdfs:label>
+        <rdfs:label xml:lang="fr">Événement Nucléaire</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Nurse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Nurse">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#OrganizationMemberRole"/>
+        <rdfs:label xml:lang="fr">Infirmier</rdfs:label>
+        <rdfs:label xml:lang="en">Nurse</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Object_Stasis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Object_Stasis">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#Stasis"/>
+        <rdfs:label xml:lang="en">Etat de l&apos;objet</rdfs:label>
+        <rdfs:label xml:lang="en">Object_Stasis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Offensive_Act -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Offensive_Act">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Act_Profile"/>
+        <ExtendedRelationOntology:alternative_label xml:lang="en">An offensive act is a process profile that consists of an act of gain an objective or achieve some larger goal.</ExtendedRelationOntology:alternative_label>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">Un acte offensif est un type de processus qui désigne un acte visant à atteindre un objectif.</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="fr">Act Offensif</rdfs:label>
+        <rdfs:label xml:lang="en">Offensive Act</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Operation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Operation">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ProcessAggregate"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#has_process_part"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Act_of_Victims_Evacuation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#has_process_part"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Act_of_Victims_Gathering"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#has_process_part"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Act_of_Victims_Rescue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ExtendedRelationOntology:alternative_label xml:lang="en">An operation is a process of an organized activity involving a number of stakholders</ExtendedRelationOntology:alternative_label>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">Une opération est un processus d&apos;activitées impliquant un certain nombre d&apos;acteurs.</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="en">Operation</rdfs:label>
+        <rdfs:label xml:lang="fr">Opération</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Operationnal_Role -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Operationnal_Role">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#OccupationRole"/>
+        <rdfs:label xml:lang="en">Operationnal Role</rdfs:label>
+        <rdfs:label xml:lang="fr">Rôle opérationnel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Psychologist -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Psychologist">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#OrganizationMemberRole"/>
+        <rdfs:label xml:lang="en">Psychologist</rdfs:label>
+        <rdfs:label xml:lang="fr">Psychologue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Radiologic_accident -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Radiologic_accident">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Accident"/>
+        <rdfs:label xml:lang="fr">Accident Radiologique</rdfs:label>
+        <rdfs:label xml:lang="en">Radiological Accident</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Railway_accident -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Railway_accident">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Transport_accident"/>
+        <rdfs:label xml:lang="fr">Accident de chemin de fer</rdfs:label>
+        <rdfs:label xml:lang="en">Railway Accident</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Real_Rescue_Act -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Real_Rescue_Act">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#Act"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#is_part_of_process"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Operation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ExtendedRelationOntology:alternative_label xml:lang="en">Real rescue act is the realized act of rescue in case of real disaster response scenarios.</ExtendedRelationOntology:alternative_label>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">Un acte de secours réel est un act qui désigne les actions de secours réalisées dans le cadre d&apos;une réponse réelle à une catastrophe.</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="fr">Act de Secours Réel</rdfs:label>
+        <rdfs:label xml:lang="en">Real Rescue Act</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Reconnaissance_Act -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Reconnaissance_Act">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Act_Profile"/>
+        <ExtendedRelationOntology:alternative_label xml:lang="en">A reconnaissance act is a process profile that consists of an act of observation of a region to locate an enemy or a danger.</ExtendedRelationOntology:alternative_label>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">Un act de reconnaissance est un type de processus qui désigne un acte d&apos;observation d&apos;une région pour localiser un ennemi ou un danger.</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="fr">Act de Reconnaissance</rdfs:label>
+        <rdfs:label xml:lang="en">Reconnaissance Act</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Restaurant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Restaurant">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/GeospatialOntology#ConstructedFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Road_accident -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Road_accident">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Transport_accident"/>
+        <rdfs:label xml:lang="fr">Accident de la route</rdfs:label>
+        <rdfs:label xml:lang="en">Road Accident</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Simulated_Act -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Simulated_Act">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#Act"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#is_part_of_process"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Operation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="fr">Acte Simulé</rdfs:label>
+        <rdfs:label xml:lang="en">Simulated Act</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Stadium -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Stadium">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/GeospatialOntology#ConstructedFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Storm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Storm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Climatic_event"/>
+        <rdfs:isDefinedBy xml:lang="en">A storm is a natural disaster that consists of a violent disturbance of the atmosphere with strong winds and usually rain, thunder, lightning, or snow.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="fr">Un orage est une catastrophe naturelle qui désigne une perturbation atmosphérique violente, caractérisée par des phénomènes électriques (éclairs, tonnerre), souvent accompagnée de pluie, de vent.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="fr">Orage</rdfs:label>
+        <rdfs:label xml:lang="en">Storm</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Terrorist_attack -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Terrorist_attack">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Human-made_Disaster"/>
+        <rdfs:isDefinedBy xml:lang="en">A terrorist attack is defined as a disaster process that is violent or dangerous to human life, with the intent of furthering political or social objectives.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="fr">Une attaque terroriste est définie comme un processus violent ou dangereux pour la vie humaine, commis dans l&apos;intention de causer la mort ou des blessures graves à des civils ou à des non-combattants</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="fr">Attaque Terroriste</rdfs:label>
+        <rdfs:label xml:lang="en">Terrorist Attack</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Tornado -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Tornado">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Climatic_event"/>
+        <rdfs:isDefinedBy xml:lang="en">A tornado is a natural disaster that consists of a mobile, destructive vortex of violently rotating winds having the appearance of a funnel-shaped cloud and advancing beneath a large storm system.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="fr">Une tornade est une catastrophe naturelle qui désigne un mouvement tournant de l&apos;atmosphère, effet violent de certaines perturbations tropicales.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="fr">Tornade</rdfs:label>
+        <rdfs:label xml:lang="en">Tornado</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Transport_accident -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Transport_accident">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Accident"/>
+        <rdfs:label xml:lang="fr">Accident de Transport</rdfs:label>
+        <rdfs:label xml:lang="en">Transport Accident</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Tsunami -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Tsunami">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Geologic_event"/>
+        <ExtendedRelationOntology:alternative_label xml:lang="en">A tsunami is a natural disaster that consists of a series of waves in a water body caused by the displacement of a large volume of water, generally in an ocean or a large lake.</ExtendedRelationOntology:alternative_label>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">Tsunamie est une catastrophe naturelle qui désigne une série d&apos;ondes de très grande période se propageant à travers un milieu aquatique (océan, mer ou lac), issues du brusque mouvement d&apos;un grand volume d&apos;eau.</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="en">Tsunami</rdfs:label>
+        <rdfs:label xml:lang="fr">Tsunami</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Veterinary -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Veterinary">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#OrganizationMemberRole"/>
+        <rdfs:label xml:lang="en">Veterinary</rdfs:label>
+        <rdfs:label xml:lang="fr">Vétérinaire</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Victim -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Victim">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#has_role"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Victim_Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#has_stasis"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Victim_Stasis"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Victim</rdfs:label>
+        <rdfs:label xml:lang="fr">Victime</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Victim_Gathering_Point -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Victim_Gathering_Point">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Action_Center"/>
+        <rdfs:comment xml:lang="fr">Point de Rassemblement des Victimes</rdfs:comment>
+        <rdfs:label xml:lang="en">Victim Gathering Point</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Victim_Role -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Victim_Role">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#realized_by"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="fr">Rôle de Victime</rdfs:label>
+        <rdfs:label xml:lang="en">Victim Role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Victim_Stasis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Victim_Stasis">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#Stasis"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#designated_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Victim_Stasis_Code_Identifier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="fr">Etat Victime</rdfs:label>
+        <rdfs:label xml:lang="en">Victim Stasis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Victim_Stasis_Code_Identifier -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Victim_Stasis_Code_Identifier">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#CodeIdentifier"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#is_about"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Victim"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="fr">Code Identifiant de l&apos;état des Victimes</rdfs:label>
+        <rdfs:label xml:lang="en">Victim Stasis Code Identifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Volcanic_eruption -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Volcanic_eruption">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Geologic_event"/>
+        <ExtendedRelationOntology:alternative_label xml:lang="en">A volcanic event is a natural disaster that consists of a volcanic eruption that occurs when hot materials from the Earth&apos;s interior are thrown out of a volcano.</ExtendedRelationOntology:alternative_label>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">Une éruption Volcanique est une catasrophe naturelle qui désigne un phénomène géologique caractérisé par l&apos;émission, par un volcan, de laves et/ou de téphras accompagnés de gaz volcaniques.</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="en">Volcanic Eruption</rdfs:label>
+        <rdfs:label xml:lang="fr">Éruption Volcanique</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

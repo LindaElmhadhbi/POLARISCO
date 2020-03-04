@@ -1,0 +1,929 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/linda/ontologies/2019/5/AllPOLARISCOntology#"
+     xml:base="http://www.semanticweb.org/linda/ontologies/2019/5/AllPOLARISCOntology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:doid="http://purl.obolibrary.org/obo/doid#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ExtendedRelationOntology="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/AllPOLARISCOntology">
+        <owl:imports rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities"/>
+        <owl:imports rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AllCoreOntology"/>
+        <owl:imports rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/6/POLARISCMessages"/>
+        <owl:imports rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO"/>
+        <owl:imports rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources"/>
+        <owl:imports rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters"/>
+        <owl:imports rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie"/>
+        <owl:imports rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits"/>
+        <owl:imports rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/AllPOLARISCOntology#choose -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/AllPOLARISCOntology#choose"/>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/AllPOLARISCOntology#transfered_to -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/AllPOLARISCOntology#transfered_to"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#Person -->
+
+    <rdf:Description rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#Person">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#is_affected_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Disaster"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2017/11/Polarisc-SAMU#ACC_PRO -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2017/11/Polarisc-SAMU#ACC_PRO">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Action_Center_Special_Risk"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2017/11/Polarisc-SAMU#ACC_SPORT -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2017/11/Polarisc-SAMU#ACC_SPORT">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Action_Center_Special_Risk"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Anesthesia -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Anesthesia">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/doid#realized_by"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Anesthesiologist"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/doid#realized_by"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Nurse_Anethetist"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#involves"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Anaesthetic_vaporiser"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#involves"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Anesthesia_Machine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#involves"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:ERO:Oxygen_Monitor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Appendectomy_Surgery -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Appendectomy_Surgery">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/doid#realized_by"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#General_Surgeon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Cardiovascular_Surgery -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Cardiovascular_Surgery">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/doid#realized_by"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Cardiothoracic_Surgeon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Cholecystectomy_Surgery -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Cholecystectomy_Surgery">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/doid#realized_by"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#General_Surgeon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Coronary_Artery_Bypass_Surgery -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Coronary_Artery_Bypass_Surgery">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/doid#realized_by"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#General_Surgeon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Debridement_of_Wound_Burn_Infection_Surgery -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Debridement_of_Wound_Burn_Infection_Surgery">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/doid#realized_by"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#General_Surgeon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Inguinal_Hernia_Repair_Surgery -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Inguinal_Hernia_Repair_Surgery">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/doid#realized_by"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#General_Surgeon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Nursing -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Act_of_Nursing">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/doid#realized_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Nurse_Practioner"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Endobronchial_and_Endotracheal_Intubation_Tube -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Endobronchial_and_Endotracheal_Intubation_Tube">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_used_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Physician"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#High-Concentration_Oxygen_Mask -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#High-Concentration_Oxygen_Mask">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_used_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Anesthesiologist"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_used_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Nurse_Anethetist"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_used_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Nurse_Practioner"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Laryngoscope_Blade -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Laryngoscope_Blade">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_used_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Physician"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Medical_device -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Medical_device">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/doid#located_in"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Hospital"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Operating_Room -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Operating_Room">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_used_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Anesthesiologist"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_used_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Nurse_Anethetist"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_used_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Nurse_Practioner"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_used_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Surgeon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Oxygen_Goggles -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Oxygen_Goggles">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_used_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Nurse_Aide"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Respirator_Circuit -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Respirator_Circuit">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_used_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Nurse_Practioner"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Short_Peripheral_Catheter -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Short_Peripheral_Catheter">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_used_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Physician"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Tracheobronchial_Aspiration_Tube -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#Tracheobronchial_Aspiration_Tube">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_used_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Physician"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Anaesthetic_vaporiser -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Anaesthetic_vaporiser">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_used_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Anesthesiologist"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_used_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Nurse_Anethetist"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Anesthesia_Machine -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Anesthesia_Machine">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_used_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Anesthesiologist"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_used_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Nurse_Anethetist"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Angiograph -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Angiograph">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_used_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Nurse_Practioner"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Blood_Analyzer -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Blood_Analyzer">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_used_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Nurse_Practioner"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Blood_Pressure_Monitor -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Blood_Pressure_Monitor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_used_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Nurse_Practioner"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Blood_Pressure_Transducer -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Blood_Pressure_Transducer">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_used_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Nurse_Practioner"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Calorimeter -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Calorimeter">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_used_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Nurse_Aide"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Defibrillator -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Defibrillator">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_used_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Cardiologist"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Dialysis_system -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Dialysis_system">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_used_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Physician"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Incubator -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Incubator">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_used_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Physician"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Infusion_pumps -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Infusion_pumps">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_used_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Nurse_Practioner"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Nebulizer -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Nebulizer">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_used_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Nurse_Practioner"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Scanner -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:Scanner">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_used_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Physician"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:ERO:Drug_Delivery_Device -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:ERO:Drug_Delivery_Device">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_used_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Nurse_Practioner"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:ERO:Oxygen_Monitor -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/10/POLARISCHealthcareResources#ERO:ERO:Oxygen_Monitor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_used_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Nurse_Aide"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Victim -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Victim">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/AllPOLARISCOntology#transfered_to"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Hospital"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Absolute_Emergency -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Absolute_Emergency">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#P0"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Action_Center_Fire -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Action_Center_Fire">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#FEU"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Action_Center_Special_Risk -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Action_Center_Special_Risk">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#AGRESSION"/>
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#ARMEFEU"/>
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#AVP"/>
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#CATA"/>
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#CHUTE"/>
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#COUTEAU"/>
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#DOMJEU"/>
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#ECRASE"/>
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#ELEC"/>
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#EXPLOSIF"/>
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#PENDU"/>
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#TOXIQUE"/>
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#00000"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Action_Center_Water -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Action_Center_Water">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#NOYADE"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#All_Terrain_Vehicle -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#All_Terrain_Vehicle">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#All-Terrain_Vehicle"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Relative_Emergency -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Relative_Emergency">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#P1"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Road_Rescue_Vehicle -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Road_Rescue_Vehicle">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Radio_Medical_Vehicule"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#UD -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#UD">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#P2"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarmerie_Helicpoter -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarmerie_Helicpoter">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Ambulance_Helicopter"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Vehicule_GIGN -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Vehicule_GIGN">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Unmarked_Vehicle"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Véhicule_Operationelle -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Véhicule_Operationelle">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Patrol_Vehicle"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Public_Authority_Role -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Public_Authority_Role">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#supervises"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighter_Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#supervises"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarmerie_Member_Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#supervises"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Healthcare_Member_Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#supervises"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Police_Force_Member_Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Ministre_d&apos;Intérieur -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCPublicAuthorities#Ministre_d&apos;Intérieur">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#supervises"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Departmental_Director_of_the_Fire_and_Rescue_Service"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#supervises"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Directeur_Générale_de_Gendarmerie"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#supervises"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Director_of_Medical_Rescue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#supervises"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#General_Director_of_the_National_Police"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#AGRESSION -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#AGRESSION"/>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#ARMEFEU -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#ARMEFEU"/>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#AVP -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#AVP"/>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Ambulance_Helicopter -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Ambulance_Helicopter"/>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#CATA -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#CATA"/>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#CHUTE -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#CHUTE"/>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#COUTEAU -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#COUTEAU"/>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#DOMJEU -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#DOMJEU"/>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Director_of_Medical_Rescue -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Director_of_Medical_Rescue">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/5/AllPOLARISCOntology#choose"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Hospital"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#ECRASE -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#ECRASE"/>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#ELEC -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#ELEC"/>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#EXPLOSIF -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#EXPLOSIF"/>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#FEU -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#FEU"/>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Healthcare_Member -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Healthcare_Member">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#agent_in"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Hospital"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#NOYADE -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#NOYADE"/>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#P0 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#P0"/>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#P1 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#P1"/>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#P2 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#P2"/>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#PENDU -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#PENDU"/>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Radio_Medical_Vehicule -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#Radio_Medical_Vehicule"/>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#TOXIQUE -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#TOXIQUE"/>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#00000 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCHealthcareUnits#00000"/>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#All-Terrain_Vehicle -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#All-Terrain_Vehicle"/>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Patrol_Vehicle -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Patrol_Vehicle"/>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Unmarked_Vehicle -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/5/POLARISCPolice#Unmarked_Vehicle"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

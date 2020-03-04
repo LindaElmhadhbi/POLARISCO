@@ -1,0 +1,978 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#"
+     xml:base="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters"
+     xmlns:ExtendedRelationOntology="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters">
+        <owl:imports rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#has_color -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#has_color"/>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#includes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#includes">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Tank -->
+
+    <rdf:Description rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Tank">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Tank"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfReconnaissance -->
+
+    <rdf:Description rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfReconnaissance">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#needs"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Reconnaissance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Act_of_Victims_Evacuation -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Act_of_Victims_Evacuation">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Act_of_Victims_Gathering -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Act_of_Victims_Gathering">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Act_of_Victims_Rescue -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Act_of_Victims_Rescue">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#needs"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Medical_Aid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#needs"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Sanitary_Vehicle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#needs"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Vehicle_of_Secor_and_Assistance_to_Victim"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Absolute_Emergency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Absolute_Emergency">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighters_Victim_Stasis_Code_Identifier"/>
+        <ExtendedRelationOntology:alternative_label xml:lang="en">Absolute Emergency</ExtendedRelationOntology:alternative_label>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">Urgence Absolue</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="en">UA</rdfs:label>
+        <rdfs:label xml:lang="fr">UA</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Act_of_Firefighting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Act_of_Firefighting">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#Act"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Act_of_Forest_Firefighting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Act_of_Forest_Firefighting">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Act_of_Firefighting"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#realized_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Sapper"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#needs"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Forest_fire_Tank_Truck"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#needs"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Pumper"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#needs"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Tank"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Act of Forest Firefighting</rdfs:label>
+        <rdfs:label xml:lang="fr">Acte d&apos;extinction d&apos;incendie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Action_Center_Fire -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Action_Center_Fire">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighter_Action_Center"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#has_color"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Red"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Action Center Fire</rdfs:label>
+        <rdfs:label xml:lang="fr">Centre d&apos;action Incendie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Action_Center_Special_Risk -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Action_Center_Special_Risk">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighter_Action_Center"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#has_color"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Orange"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Action Center Special Risk</rdfs:label>
+        <rdfs:label xml:lang="fr">Centre d&apos;action Risque Particulier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Action_Center_Water -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Action_Center_Water">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighter_Action_Center"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#has_color"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Blue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Action Center Water</rdfs:label>
+        <rdfs:label xml:lang="fr">Centre d&apos;action Eau</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#All_Terrain_Vehicle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#All_Terrain_Vehicle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighters_Vehicle"/>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">VTT</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="en">All Terrain Vehicle</rdfs:label>
+        <rdfs:label xml:lang="fr">Véhicule tous-Terrains</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Center_of_Grouping_Means_and_Transit_Point -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Center_of_Grouping_Means_and_Transit_Point">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighters_Unit"/>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">CRM-PT</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="en">Center of Grouping Means and Transit Point</rdfs:label>
+        <rdfs:label xml:lang="fr">Centre de Regroupement des Moyens et Point de Transit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Chemical_Intervention -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Chemical_Intervention">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighter_Capability"/>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">CMIC</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="en">Chemical Intervention</rdfs:label>
+        <rdfs:label xml:lang="fr">Intervention Chimique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Column -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Column">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Group_of_Vehicles"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#includes"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Group"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#includes"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">4</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Group"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="fr">Colonne</rdfs:label>
+        <rdfs:label xml:lang="en">Column</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Column_Chef -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Column_Chef">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighter_Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#has_quality"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Operationnal_Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_supervised_by"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Site_Chef"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="fr">Chef de Colonne</rdfs:label>
+        <rdfs:label xml:lang="en">Column Chef</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Column_Command_Post -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Column_Command_Post">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Command_Post"/>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">PCC</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="en">Column Command Post</rdfs:label>
+        <rdfs:label xml:lang="fr">Poste de Commandement de Colonne</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Command_Post -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Command_Post">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighters_Unit"/>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">PC</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="en">Command Post</rdfs:label>
+        <rdfs:label xml:lang="fr">Poste de Commandement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Command_Post_Vehicle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Command_Post_Vehicle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighters_Truck"/>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">VPC</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="en">Command Post Vehicle</rdfs:label>
+        <rdfs:label xml:lang="fr">Véhicule Poste de Commandement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Commander_of_Emergency_Operations -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Commander_of_Emergency_Operations">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighter_Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#has_quality"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Commandement_Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#needs"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Command_Post_Vehicle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000118 xml:lang="fr">COS</obo:IAO_0000118>
+        <rdfs:label xml:lang="fr">Commandant des Opérations de Secours</rdfs:label>
+        <rdfs:label xml:lang="en">Commander of Emergency Operations</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Departmental_Director_of_the_Fire_and_Rescue_Service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Departmental_Director_of_the_Fire_and_Rescue_Service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighter_Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#has_quality"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Commandement_Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">DDSIS</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="en">Departmental Director of the Fire and Rescue Service</rdfs:label>
+        <rdfs:label xml:lang="fr">Directeur Départemental du Service d&apos;Incendie et de Secours</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Departmental_Emergency_Operations_Center -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Departmental_Emergency_Operations_Center">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighters_Unit"/>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">CODIS</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="fr">Centre Opérationnel Départemental d&apos;Incendie et de Secours</rdfs:label>
+        <rdfs:label xml:lang="en">Departmental Emergency Operations Center</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Departmental_Emergency_Service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Departmental_Emergency_Service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighters_Unit"/>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">SDIS</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="en">Departmental Emergency Service</rdfs:label>
+        <rdfs:label xml:lang="fr">Service départemental d&apos;incendie et de secours</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Diver -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Diver">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Sapper"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#has_capability"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Diving"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Diver</rdfs:label>
+        <rdfs:label xml:lang="fr">Plongeur</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Diving -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Diving">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighter_Capability"/>
+        <rdfs:label xml:lang="en">Diving</rdfs:label>
+        <rdfs:label xml:lang="fr">Equipe de plongée</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Elevating_Work_Truck -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Elevating_Work_Truck">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighters_Truck"/>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">MEA</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="en">Elevating Work Truck</rdfs:label>
+        <rdfs:label xml:lang="fr">Moyen Elévateur Aérien</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Emergency_Center -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Emergency_Center">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Fire_and_Rescue_Center"/>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">CS</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="fr">Centre de Secours</rdfs:label>
+        <rdfs:label xml:lang="en">Emergency center</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Fire_and_Rescue_Center -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Fire_and_Rescue_Center">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighters_Unit"/>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">CIS</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="fr">Centre d&apos;Incendie et de Secours</rdfs:label>
+        <rdfs:label xml:lang="en">Fire and Rescue Center</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Fire_and_Rescue_Director -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Fire_and_Rescue_Director">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighter_Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#has_quality"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Commandement_Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">DSI</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="fr">Directeur des Secours Incendie</rdfs:label>
+        <rdfs:label xml:lang="en">Fire and Rescue Director</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighter">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#OrganizationMember"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_affiliated_with"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighters_Unit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#has_role"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighter_Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Firefighter</rdfs:label>
+        <rdfs:label xml:lang="fr">Pompier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighter_Action_Center -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighter_Action_Center">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Action_Center"/>
+        <rdfs:label xml:lang="fr">Centre d&apos;action des Pompiers</rdfs:label>
+        <rdfs:label xml:lang="en">Firefighter Action Center</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighter_Capability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighter_Capability">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#OrganizationCapability"/>
+        <rdfs:label xml:lang="en">Firefighter Capability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighter_Role -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighter_Role">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#OrganizationMemberRole"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_supervised_by"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Vehicle_Chef"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Firefighter Role</rdfs:label>
+        <rdfs:label xml:lang="fr">Role du Pompier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighters_Aircraft -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighters_Aircraft">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Aircraft"/>
+        <rdfs:label xml:lang="en">Firefighters Aircraft</rdfs:label>
+        <rdfs:label xml:lang="fr">Moyen Aérien des Pompiers</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighters_Truck -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighters_Truck">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Truck"/>
+        <rdfs:label xml:lang="fr">Camion de pompiers</rdfs:label>
+        <rdfs:label xml:lang="en">Firefighters Truck</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighters_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighters_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#Organization"/>
+        <rdfs:comment xml:lang="fr">Organisation des sapeurs-pompiers</rdfs:comment>
+        <rdfs:label xml:lang="en">Firefighters Unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighters_Vehicle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighters_Vehicle">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Automobile"/>
+        <rdfs:label xml:lang="en">Firefighters Vehicle</rdfs:label>
+        <rdfs:label xml:lang="fr">Véhicule de pompiers</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighters_Victim_Stasis_Code_Identifier -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighters_Victim_Stasis_Code_Identifier">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Victim_Stasis_Code_Identifier"/>
+        <rdfs:label xml:lang="fr">Code Identifiant de l&apos;état des Victimes Pompiers</rdfs:label>
+        <rdfs:label xml:lang="en">Firefighters Victim Stasis Code Identifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#First_Intervention_Center -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#First_Intervention_Center">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Fire_and_Rescue_Center"/>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">CPI</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="fr">Centre de première intervention</rdfs:label>
+        <rdfs:label xml:lang="en">First Intervention Center</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Forest_Fire -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Forest_Fire">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighter_Capability"/>
+        <rdfs:label xml:lang="fr">Feux de Forêts</rdfs:label>
+        <rdfs:label xml:lang="en">Forest Fire</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Forest_fire_Tank_Truck -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Forest_fire_Tank_Truck">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighters_Truck"/>
+        <obo:IAO_0000118 xml:lang="fr">CCF</obo:IAO_0000118>
+        <rdfs:label xml:lang="fr">Camion Citerne Feux de Forêt</rdfs:label>
+        <rdfs:label xml:lang="en">Forest fire Tank Truck</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Group -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Group">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Group_of_Vehicles"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#includes"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Vehicle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#includes"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">4</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Vehicle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Group</rdfs:label>
+        <rdfs:label xml:lang="fr">Groupe</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Group_of_Vehicles -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Group_of_Vehicles">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000027"/>
+        <rdfs:label xml:lang="en">Group of Vehicles</rdfs:label>
+        <rdfs:label xml:lang="fr">Groupe de Véhicules</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Health_and_Relief_Medical_Service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Health_and_Relief_Medical_Service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighters_Unit"/>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">SSSM</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="en">Health and Relief Medical Service</rdfs:label>
+        <rdfs:label xml:lang="fr">Service de Santé et de Secours Médical</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Medical_Aid -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Medical_Aid">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighter_Capability"/>
+        <rdfs:label xml:lang="fr">Equipe Médicale</rdfs:label>
+        <rdfs:label xml:lang="en">Medical Aid</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Off-Road_Link_Vehicle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Off-Road_Link_Vehicle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighters_Vehicle"/>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">VLHR</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="en">Off-Road Link Vehicle</rdfs:label>
+        <rdfs:label xml:lang="fr">Véhicule de Liaison Hors Route</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Primary_Emergency_Center -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Primary_Emergency_Center">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Fire_and_Rescue_Center"/>
+        <obo:IAO_0000115 xml:lang="fr">Un Centre de Secours Principal (CSP) est un Centre d&apos;Incendie et de Secours (CIS) rattaché à un Service Départemental d&apos;Incendie et de Secours (SDIS).</obo:IAO_0000115>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">CSP</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="fr">Centre de secours principal</rdfs:label>
+        <rdfs:label xml:lang="en">Primary Emergency Center</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Pumper -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Pumper">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighters_Truck"/>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">FPT</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="fr">Fourgon Pompe Tonne</rdfs:label>
+        <rdfs:label xml:lang="en">Pumper</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Reconnaissance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Reconnaissance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighter_Capability"/>
+        <rdfs:label xml:lang="en">Reconnaissance</rdfs:label>
+        <rdfs:label xml:lang="fr">Reconnaissance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Relative_Emergency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Relative_Emergency">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighters_Victim_Stasis_Code_Identifier"/>
+        <ExtendedRelationOntology:alternative_label xml:lang="en">Relative Emergency</ExtendedRelationOntology:alternative_label>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">Urgence Relative</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="en">UR</rdfs:label>
+        <rdfs:label xml:lang="fr">UR</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Road_Rescue_Vehicle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Road_Rescue_Vehicle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighters_Vehicle"/>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">VSR</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="en">Road Rescue Vehicle</rdfs:label>
+        <rdfs:label xml:lang="fr">Véhicule de Secours Routier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Rope_Rescue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Rope_Rescue">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighter_Capability"/>
+        <obo:IAO_0000118 xml:lang="fr">GRIMP</obo:IAO_0000118>
+        <rdfs:label xml:lang="fr">Reconnaissance et Intervention en Milieux Périlleux</rdfs:label>
+        <rdfs:label xml:lang="en">Rope Rescue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Rural_Tank_Truck -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Rural_Tank_Truck">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighters_Truck"/>
+        <obo:IAO_0000118 xml:lang="fr">CCR</obo:IAO_0000118>
+        <rdfs:label xml:lang="fr">Camion Citerne Rural</rdfs:label>
+        <rdfs:label xml:lang="en">Rural Tank Truck</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Sanitary_Vehicle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Sanitary_Vehicle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighters_Vehicle"/>
+        <obo:IAO_0000118 xml:lang="fr">VSS</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">Sanitary Vehicle</rdfs:label>
+        <rdfs:label xml:lang="fr">Véhicule de Soutien Sanitaire</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Sapper -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Sapper">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighter_Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#has_capability"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Chemical_Intervention"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Diving"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Forest_Fire"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Medical_Aid"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Reconnaissance"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Rope_Rescue"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="fr">Equipier</rdfs:label>
+        <rdfs:label xml:lang="en">Sapper</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Site -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Site">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Group_of_Vehicles"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#includes"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Group"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Site</rdfs:label>
+        <rdfs:label xml:lang="fr">Site</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Site_Chef -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Site_Chef">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighter_Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#has_quality"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Operationnal_Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_supervised_by"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Commander_of_Emergency_Operations"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="fr">Chef de Site</rdfs:label>
+        <rdfs:label xml:lang="en">Site Chef</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Site_Command_Post -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Site_Command_Post">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Command_Post"/>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">PCS</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="fr">Poste de Commandement de Site</rdfs:label>
+        <rdfs:label xml:lang="en">Site Command Post</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Tank -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Tank">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Equipment"/>
+        <rdfs:isDefinedBy xml:lang="en">A tank is an equipment that consists of a water reservoir.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Tank</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Team_Chef -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Team_Chef">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighter_Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#has_quality"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Operationnal_Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_supervised_by"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Column_Chef"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="fr">Chef_d&apos;équipe</rdfs:label>
+        <rdfs:label xml:lang="en">Team Chef</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Technological_Risks_Vehicle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Technological_Risks_Vehicle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighters_Truck"/>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">VIRT</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="en">Technological Risks Vehicle</rdfs:label>
+        <rdfs:label xml:lang="fr">Véhicule d&apos;Intervention sur Risques Technologiques</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Tracker -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Tracker">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighters_Aircraft"/>
+        <rdfs:label xml:lang="fr">Avion Bombardier d&apos;Eau</rdfs:label>
+        <rdfs:label xml:lang="en">Tracker</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#UD -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#UD">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighters_Victim_Stasis_Code_Identifier"/>
+        <ExtendedRelationOntology:alternative_label xml:lang="en">Exceeded Emergency</ExtendedRelationOntology:alternative_label>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">Urgence Dépassée</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="en">UD</rdfs:label>
+        <rdfs:label xml:lang="fr">UD</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#UMP -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#UMP">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighters_Victim_Stasis_Code_Identifier"/>
+        <ExtendedRelationOntology:alternative_label xml:lang="en">Psychological Emergency</ExtendedRelationOntology:alternative_label>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">Urgence Médico-Psychologique</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="en">UMP</rdfs:label>
+        <rdfs:label xml:lang="fr">UMP</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Vehicle_Chef -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Vehicle_Chef">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighter_Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#has_quality"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Operationnal_Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_supervised_by"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Team_Chef"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="fr">Chef d&apos;agres</rdfs:label>
+        <rdfs:label xml:lang="en">Vehicle Chef</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Vehicle_of_Secor_and_Assistance_to_Victim -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Vehicle_of_Secor_and_Assistance_to_Victim">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCFirefighters#Firefighters_Vehicle"/>
+        <ExtendedRelationOntology:alternative_label xml:lang="fr">VSAV</ExtendedRelationOntology:alternative_label>
+        <rdfs:label xml:lang="en">Vehicle of Secor and Assistance to Victim</rdfs:label>
+        <rdfs:label xml:lang="fr">Véhicule de Secours et d&apos;Assistance aux Victime</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

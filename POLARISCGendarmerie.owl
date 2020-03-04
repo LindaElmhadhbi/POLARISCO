@@ -1,0 +1,313 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#"
+     xml:base="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie"
+     xmlns:ExtendedRelationOntology="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie">
+        <owl:imports rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Directeur_Générale_de_Gendarmerie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Directeur_Générale_de_Gendarmerie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarmerie_Member_Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#has_quality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Commandement_Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="fr">Directeur Générale de la Gendarmerie</rdfs:label>
+        <rdfs:label xml:lang="en">General Director of the Gendarmerie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarme -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarme">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarmerie_Member_Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#has_quality"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Operationnal_Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_supervised_by"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Directeur_Générale_de_Gendarmerie"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Gendarme</rdfs:label>
+        <rdfs:label xml:lang="fr">Gendarme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarme_Mobile -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarme_Mobile">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarme"/>
+        <rdfs:label xml:lang="fr">Gendarme Mobile</rdfs:label>
+        <rdfs:label xml:lang="en">Mobile Gendarme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarme_Plongeur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarme_Plongeur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarme"/>
+        <rdfs:label xml:lang="en">Diver Gendarme</rdfs:label>
+        <rdfs:label xml:lang="fr">Gendarme Plongeur</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarme_à_Cheval -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarme_à_Cheval">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarme"/>
+        <rdfs:label xml:lang="fr">Gendarme à Cheval</rdfs:label>
+        <rdfs:label xml:lang="en">Horseback Gendarme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarme_à_Moto -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarme_à_Moto">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarme"/>
+        <rdfs:label xml:lang="fr">Gendarme à Moto</rdfs:label>
+        <rdfs:label xml:lang="en">Motorcycle Gendarme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarmerie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarmerie">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#Organization"/>
+        <rdfs:label xml:lang="en">Gendarmerie</rdfs:label>
+        <rdfs:label xml:lang="fr">Gendarmerie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarmerie_Aircraft -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarmerie_Aircraft">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Aircraft"/>
+        <rdfs:label xml:lang="en">Gendarmerie Aircraft</rdfs:label>
+        <rdfs:label xml:lang="fr">Moyen Aérien Gendarmerie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarmerie_Helicpoter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarmerie_Helicpoter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarmerie_Aircraft"/>
+        <rdfs:label xml:lang="en">Gendarmerie Helicpoter</rdfs:label>
+        <rdfs:label xml:lang="fr">Hélicpotere Gendarmerie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarmerie_Maritime -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarmerie_Maritime">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarmerie"/>
+        <rdfs:label xml:lang="fr">Gendarmerie Maritime</rdfs:label>
+        <rdfs:label xml:lang="en">Maritime Gendarmerie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarmerie_Member -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarmerie_Member">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#OrganizationMember"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_affiliated_with"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarmerie"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Gendarmerie Member</rdfs:label>
+        <rdfs:label xml:lang="fr">Gendarmerie Membre</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarmerie_Member_Role -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarmerie_Member_Role">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#OrganizationMemberRole"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#participates_in"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Act_of_Public_Order"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#participates_in"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Act_of_Security"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Gendarmerie Member Role</rdfs:label>
+        <rdfs:label xml:lang="fr">Role du Membre de Gendarmerie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarmerie_Vehicle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarmerie_Vehicle">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#GroundMotorVehicle"/>
+        <rdfs:label xml:lang="en">Gendarmerie Vehicle</rdfs:label>
+        <rdfs:label xml:lang="fr">Véhicle de Gendarmerie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarmerie_de_la_Sécurité_des_Armements_Nucléaires -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarmerie_de_la_Sécurité_des_Armements_Nucléaires">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarmerie"/>
+        <rdfs:label xml:lang="fr">Gendarmerie de la Sécurité des Armements Nucléaires</rdfs:label>
+        <rdfs:label xml:lang="en">Nuclear Arms Security Gendarmerie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarmerie_des_Transports_Aériens -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarmerie_des_Transports_Aériens">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarmerie"/>
+        <rdfs:label xml:lang="en">Air Transport Gendarmerie</rdfs:label>
+        <rdfs:label xml:lang="fr">Gendarmerie des Transports Aériens</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Non-Commissioned_Officer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Non-Commissioned_Officer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarmerie_Member_Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_supervised_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Officier_Gendarmerie"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Non-Commissioned Officer</rdfs:label>
+        <rdfs:label xml:lang="fr">Sous Officier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Officier_Gendarmerie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Officier_Gendarmerie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarmerie_Member_Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#has_quality"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/3/PCC-POLARISCO#Operationnal_Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#is_supervised_by"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Directeur_Générale_de_Gendarmerie"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Gendarmerie Officier</rdfs:label>
+        <rdfs:label xml:lang="fr">Officier Gendarmerie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Specific_Vehicle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Specific_Vehicle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarmerie_Vehicle"/>
+        <obo:IAO_0000118 xml:lang="en">SV</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">Specific Vehicle</rdfs:label>
+        <rdfs:label xml:lang="fr">Véhicle Specifique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Vehicule_GIGN -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Vehicule_GIGN">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarmerie_Vehicle"/>
+        <obo:IAO_0000118 xml:lang="en">VGIGN</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">Vehicule GIGN</rdfs:label>
+        <rdfs:label xml:lang="fr">Véhicule GIGN</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Véhicule_Operationelle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Véhicule_Operationelle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarmerie_Vehicle"/>
+        <obo:IAO_0000118 xml:lang="en">OV</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">Operationel Vehicule</rdfs:label>
+        <rdfs:label xml:lang="fr">Véhicule Operationelle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarmerie_de_l&apos;Air -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarmerie_de_l&apos;Air">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarmerie"/>
+        <rdfs:label xml:lang="en">Air Force Gendarmerie</rdfs:label>
+        <rdfs:label xml:lang="fr">Gendarmerie de l&apos;Air</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarmerie_de_l&apos;Armement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarmerie_de_l&apos;Armement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linda/ontologies/2019/4/POLARISCGendarmerie#Gendarmerie"/>
+        <rdfs:label xml:lang="en">Armed Gendarmerie</rdfs:label>
+        <rdfs:label xml:lang="fr">Gendarmerie_de_l&apos;Armement</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

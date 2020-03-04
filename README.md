@@ -1,16 +1,24 @@
 # POLARISCO
 
-POLARISCO is a modular ontology that defines the Knowledge of French emergency responders in the context of the French project POLARISC ("Plateforme OpérationnelLe d’Actualisation du Renseignement Interservices pour la Sécurité Civile").
+POLARISC Ontologies (POLARISCO) is a modular ontology that defines the Knowledge of French emergency responders that are involved in the disaster response process.
+
+POLARISCO is devoloped in the context of the French project POLARISC ("Plateforme OpérationnelLe d’Actualisation du Renseignement Interservices pour la Sécurité Civile").
 
 POLARISC project started in 2017 to propose an ontology-based crisis information management system for operational disaster response.
-POLARISC Ontologies (POLARISCO) extend from Basic Formal Ontology (BFO: https://github.com/CommonCoreOntology) and Common Core Ontologies (CCO: https://github.com/BFO-ontology). 
 
-It is composed of a set of ontologies:
+POLARISCO extends from Basic Formal Ontology (BFO: https://github.com/CommonCoreOntology) as an upper-level ontology and Common Core Ontologies (CCO: https://github.com/BFO-ontology) as a mid-level ontologies, and reuse classes from Public Safety and Emergency Management ontology (PS/EM ontology) and Disease Ontoogy (DO).
+
+POLARISCO is composed of a set of ontologies including:
 *	POLARISC Common Core ontology,
 *	Firefighters ontology,
 * Healthcare units ontology,
-*	Police ontology.
+*	Police ontology,
+*	Gendarmerie ontology,
+*	Public Authorities ontology,
+*	Messages ontology,
+*	Healthcare resources ontology.
 
+To visualize POLARISCO (AllPOLARISCOntology), please check the import of all the modules.
 
 ## Publications
 
